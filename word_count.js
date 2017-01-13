@@ -25,7 +25,7 @@ var split = (str, del = ' ') => str.split(del);
 
 var remove = (str, chars) => chars.reduce((prev, curr) => prev.replace(curr, ''), str);
 
-var wordCount = (arr) =>
+var uniWordCount = (arr) =>
   arr.reduce((prev, curr) => {
     if (typeof prev[curr] !== 'undefined') {
       prev[curr] += 1;
@@ -36,10 +36,10 @@ var wordCount = (arr) =>
   }, {});
 
 var createWordCountMap = (str) => {
-  var stripChars = ['?', '!'];
-  return wordCount(split(remove(lower(str), stripChars)));
+  var stripChars = ['?', '!', ',']; // for example
+  return uniWordCount(split(remove(lower(str), stripChars)));
 }
 
-var string = 'how many tests are in this test! string test?';
+var string = 'how many tests are, in this test! string test?';
 
 console.log(createWordCountMap(string));
