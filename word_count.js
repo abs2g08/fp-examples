@@ -4,7 +4,9 @@
 
   The result will be a collection of words with their respective counts. e.g.
 
-  [{ foo: 5 }, { bar: 2 }, { test: 1 }]
+  'how many tests are, in this test! string test?' will evaluate to:
+
+  { how: 1, many: 1, tests: 1, are: 1, in: 1, this: 1, test: 2, string: 1}
 
   NOTE: this solution is not comprehensive but does demonstrate functionl programming
 
