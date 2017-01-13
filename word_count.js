@@ -4,17 +4,7 @@
 
   The result will be a collection of words with their respective counts. e.g.
 
-  [
-    {
-      foo: 5
-    },
-    {
-      bar: 2
-    },
-    {
-      test: 1
-    }
-  ]
+  [{ foo: 5 }, { bar: 2 }, { test: 1 }]
 
   NOTE: this solution is not comprehensive but does demonstrate functionl programming
 
