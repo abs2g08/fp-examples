@@ -17,15 +17,18 @@
   ]
 
   NOTE: this solution is not comprehensive but does demonstrate functionl programming
+
  */
 
-var lower = (str) => str.toLowerCase();
+"use strict"
 
-var split = (str, del = ' ') => str.split(del);
+const lower = (str) => str.toLowerCase();
 
-var remove = (str, chars) => chars.reduce((prev, curr) => prev.replace(curr, ''), str);
+const splitWords = (str, del) => str.split(typeof del !== 'undefined' ? del : ' ');
 
-var uniWordCount = (arr) =>
+const remove = (str, chars) => chars.reduce((prev, curr) => prev.replace(curr, ''), str);
+
+const uniWordCount = (arr) =>
   arr.reduce((prev, curr) => {
     if (typeof prev[curr] !== 'undefined') {
       prev[curr] += 1;
@@ -35,11 +38,11 @@ var uniWordCount = (arr) =>
     return prev;
   }, {});
 
-var createWordCountMap = (str) => {
-  var stripChars = ['?', '!', ',']; // for example
-  return uniWordCount(split(remove(lower(str), stripChars)));
+const createWordCountMap = (str) => {
+  const stripChars = ['?', '!', ',']; // for example
+  return uniWordCount(splitWords(remove(lower(str), stripChars)));
 }
 
-var string = 'how many tests are, in this test! string test?';
+const string = 'how many tests are, in this test! string test?';
 
 console.log(createWordCountMap(string));
