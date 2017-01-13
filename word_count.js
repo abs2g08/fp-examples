@@ -19,15 +19,13 @@
   NOTE: this solution is not comprehensive but does demonstrate functionl programming
  */
 
-var string = 'how many tests are in this test! string test?';
-
 var lower = (str) => str.toLowerCase();
 
-var split = (str, del = '') => str.split(del);
+var split = (str, del = ' ') => str.split(del);
 
 var remove = (str, chars) => chars.reduce((prev, curr) => prev.replace(curr, ''), str);
 
-var count = (arr) =>
+var wordCount = (arr) =>
   arr.reduce((prev, curr) => {
     if (typeof prev[curr] !== 'undefined') {
       prev[curr] += 1;
@@ -37,9 +35,11 @@ var count = (arr) =>
     return prev;
   }, {});
 
-var createCountMap = (str) => {
+var createWordCountMap = (str) => {
   var stripChars = ['?', '!'];
-  return count(split(remove(lower(str), stripChars)));
+  return wordCount(split(remove(lower(str), stripChars)));
 }
 
-console.log(createCountMap(string));
+var string = 'how many tests are in this test! string test?';
+
+console.log(createWordCountMap(string));
