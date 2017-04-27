@@ -8,7 +8,8 @@
 
   { how: 1, many: 1, tests: 1, are: 1, in: 1, this: 1, test: 2, string: 1}
 
-  NOTE: this solution is not comprehensive but does demonstrate functionl programming
+  NOTE: this solution is not comprehensive but does demonstrate
+        key functionl programming techniques
 
  */
 
@@ -20,7 +21,7 @@ const splitWords = (str, del) => str.split(typeof del !== 'undefined' ? del : ' 
 
 const remove = (str, chars) => chars.reduce((prev, curr) => prev.replace(curr, ''), str);
 
-const uniWordCount = (arr) =>
+const uniqueWordCount = (arr) =>
   arr.reduce((prev, curr) => {
     if (typeof prev[curr] !== 'undefined') {
       prev[curr] += 1;
@@ -32,7 +33,7 @@ const uniWordCount = (arr) =>
 
 const createWordCountMap = (str) => {
   const stripChars = ['?', '!', ',']; // for example
-  return uniWordCount(splitWords(remove(lower(str), stripChars)));
+  return uniqueWordCount(splitWords(remove(lower(str), stripChars)));
 }
 
 const string = 'how many tests are, in this test! string test?';
