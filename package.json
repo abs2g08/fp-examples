@@ -1,0 +1,34 @@
+{
+  "name": "fp-examples",
+  "version": "1.0.0",
+  "description": "A collection of functional programming examples in es6",
+  "main": "reverse_words.js",
+  "dependencies": {
+    "babel-core": "6.24.1"
+  },
+  "devDependencies": {
+    "babel": "6.23.0",
+    "babel-preset-es2015": "6.24.1",
+    "chai": "3.5.0",
+    "mocha": "3.4.1"
+  },
+  "scripts": {
+    "test": "mocha --compilers js:babel-core/register ./test/*.spec.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/abs2g08/fp-examples.git"
+  },
+  "keywords": [
+    "functional",
+    "programming",
+    "es6",
+    "mocha"
+  ],
+  "author": "Adam Smith",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/abs2g08/fp-examples/issues"
+  },
+  "homepage": "https://github.com/abs2g08/fp-examples#readme"
+}
