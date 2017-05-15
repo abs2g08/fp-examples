@@ -31,7 +31,7 @@ export const uniqueWordCount = (arr) =>
     return prev;
   }, {});
 
-export const createWordCountMap = (str) => {
+export default (str) => {
   const stripChars = ['?', '!', ',']; // for example
   return uniqueWordCount(splitWords(remove(lower(str), stripChars)));
 }

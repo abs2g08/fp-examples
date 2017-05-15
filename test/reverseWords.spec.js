@@ -13,7 +13,7 @@ describe('reverse should reverse an array', function() {
   expect(res).to.equal('tahw');
 });
 
-describe('join words should turn an array of strings to one string', function() {
+describe('joinWords should turn an array of strings to one string', function() {
   const arr = ['what', 'is'];
   const res = joinWords(arr);
   expect(res).to.equal('what is');
