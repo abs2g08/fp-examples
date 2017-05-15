@@ -1,4 +1,4 @@
-import reverseWords, { splitWords, reverse, joinWords } from '../reverseWords'
+import reverseWords, { splitWords, reverse, joinWords } from '../src/reverseWords'
 import { expect } from 'chai'
 
 describe('reverseWords', function() {

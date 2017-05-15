@@ -1,4 +1,4 @@
-import wordCount, { lower, splitWords, remove } from '../wordCount'
+import wordCount, { lower, splitWords, remove } from '../src/wordCount'
 import { expect } from 'chai'
 
 describe('wordCount', function() {
